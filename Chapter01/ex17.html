@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let personVo1 = {
+        no:1, 
+        name:'박명수',
+        hp: '010-1111-1111',
+        company: '02-1111-1111'
+    }
+    let personVo2 = {
+        no:2, 
+        name:'유재석',
+        hp: '010-2222-2222',
+        company: '02-2222-2222'
+    }
+    let personVo3 = {
+        no:3, 
+        name:'서장훈',
+        hp: '010-3333-3333',
+        company: '02-3333-3333'
+    }
+
+    let personList = [personVo1, personVo2, personVo3];
+
+    for(let i = 0; i < personList.length; i++){
+        console.log('번호:' + personList[i].no);
+        console.log('이름:' + personList[i].name);
+        console.log('핸드폰:' + personList[i].hp);
+        console.log('회사:' + personList[i].company);
+        console.log('----------------------------------'); 
+    }
+    </script>
+    
+</body>
+</html>

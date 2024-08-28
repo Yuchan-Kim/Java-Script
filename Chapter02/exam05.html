@@ -38,6 +38,44 @@
 </body>
 
 <script>
+	document.addEventListener("DOMContentLoaded", function(){
+		let tag01 = document.querySelector('#nav');
+		console.log(tag01);
+		console.log(tag01.tagNmae);
+
+
+		let tag02 = document.querySelector('[target = "_blank"]');
+		console.log(tag02);
+		console.log(tag02.tagName);
+
+		//아이디 알아내기
+		let tag03 = document.querySelector('div');
+		console.log(tag03);
+		console.log(tag03.id);
+
+		let tag04 = document.querySelectorAll('ul>li');
+		for (let i = 0; i < tag04.length; i++){
+
+			console.log(tag04[i]);
+            console.log(tag04[i].id);
+		
+		}
+
+		let tags05 = document.querySelectorAll('form>label');
+		for (let i = 0; i < tags05.length; i++){
+			console.log(tags05[i]);
+            console.log(tags05[i].className);
+        
+        }
+
+		
+
+
+
+
+
+
+	});
 
 
 

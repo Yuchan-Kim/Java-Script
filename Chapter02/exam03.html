@@ -22,7 +22,32 @@
 </body>
 
 <script>
+	document.addEventListener("DOMContentLoaded", function(){
+		let redClass = document.getElementsByClassName('red');
+		redClass[0].style.color = 'red';
 
+		let blueClass = document.getElementsByClassName('blue');
+		blueClass[0].style.color = 'blue';
+
+		let greenClass = document.getElementsByClassName('green');
+        greenClass[0].style.color = 'green';
+
+		let allClass = document.getElementsByTagName('*');
+        for(let i = 0; i < allClass.length; i++){
+            if(allClass[i].classList.contains('red')){
+                allClass[i].style.color ='red';
+            }
+            else if(allClass[i].classList.contains('blue')){
+                allClass[i].style.color ='blue';
+            }
+            else if(allClass[i].classList.contains('green')){
+                allClass[i].style.color ='green';
+            }
+        }
+
+		
+
+	});
 
 </script>
 

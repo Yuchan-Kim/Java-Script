@@ -39,8 +39,50 @@
 </body>
 
 <script>
+	//DOM TREE 
+	document.addEventListener("DOMContentLoaded", function(){
+		console.log("DOM content loaded");
+		let h1Tag = document.querySelector("h1");
+		h1Tag.style.color = "green";
+
+		let liTag = document.querySelector("li");
+		liTag.style.color = "blue";
+
+		let pTag = document.querySelectorAll("li");
+        for(let i = 0; i < pTag.length; i++){
+            pTag[i].style.color = "blue";
+        }
+
+		let active = document.getElementsByClassName("active");
+		active[0].style.color = "red";
+
+		let active2 = document.querySelector("#nav>ul>li.active");
+		active2.style.color = "green";
+
+		let liNlabel = document.querySelectorAll("li, label");
+		for(let i = 0; i < liNlabel.length; i++){
+			liNlabel[i].style.color = "red";
+		}
+
+		let idTag = document.querySelector('input[name = "userId"]');
+		idTag.style.color = "blue";
+
+		let last = document.querySelector('li:last-child');
+		last.style.color = 'lightgreen';
+
+		
 
 
+
+
+
+
+	});
+
+
+	window.addEventListener('load', function(){
+			console.log('load');
+	});
 </script>
 
 </html>

@@ -18,11 +18,28 @@
 		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
 	</ul>
 
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			console.log('DOMContentLoaded');
+
+			let firstTag = document.getElementById('first');
+            console.log("", firstTag);
+            firstTag.style.color = '#00ffff';
+
+			let seTag = document.getElementById('second');
+			console.dir(seTag);
+			seTag.style.color = '#ff0000';
+		});
+
+		window.addEventListener('load', function(){
+			console.log('load');
+		});
+		
+	</script>
+
 
 </body>
 
-<script>
 
-</script>
 
 </html>

@@ -65,6 +65,26 @@
 </body>
 
 <script>
+	document.addEventListener("DOMContentLoaded", function(){
+		let p11Tag = document.querySelector("#p11");
+		console.log(p11Tag);
+		console.log(p11Tag.innerHTML);
+		console.log(p11Tag.textContent);
+
+		let p13Tag = document.querySelector("#p13");
+		console.log(p13Tag);
+		console.log(p13Tag.innerHTML);
+		console.log(p13Tag.textContent);
+		p13Tag.textContent = "가나다라마바사아자차카파타하";
+
+		let p14Tag = document.querySelector("#p14");
+		console.log(p14Tag);
+		console.log(p14Tag.innerHTML);
+		console.log(p14Tag.textContent);
+		p14Tag.innerHTML = "가나다라마바사아자차카파타하";
+
+
+	});
 </script>
 
 </html>

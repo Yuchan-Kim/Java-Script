@@ -23,7 +23,16 @@
 </body>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        let btnTag = document.querySelector("#btn");
+        btnTag.addEventListener("click", function(){
+            let h1Tag = document.querySelector("#display");
+            console.log(h1Tag);
+            h1Tag.textContent = "김유찬";
+            h1Tag.style.color = "#0000ff"
+        });
 
+    });
 
 </script>
 

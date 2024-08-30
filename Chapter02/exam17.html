@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            width: 200px;
+            padding: 10px;
+            background-color: aqua;
+        }
+
+        ul>li{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+        <li>Sixth</li>
+    </ul>
+
+    <button type="button" id = "btn02">뒤에추가</button>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            let ulTag = document.querySelector("ul");
+            let btn02 = document.querySelector("#btn02");
+           
+
+            btn02.addEventListener("click", function(){
+                ulTag.insertAdjacentHTML("beforeend", "<li>New</li>");
+                let liTag = document.querySelectorAll("li");
+                
+            });  
+
+            ulTag.addEventListener('click', function(){
+                let liTag = event.target;
+                if(liTag.tagName == "LI"){
+                    ulTag.removeChild(liTag);
+                } 
+            })
+
+        });
+    </script>
+</body>
+</html>

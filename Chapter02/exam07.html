@@ -53,6 +53,23 @@
 </body>
 
 <script>
+	document.addEventListener("DOMContentLoaded", function(){
+		console.log("Finished");
+		let tag01 = document.querySelector('h1');
+		console.log(tag01);
+		console.log(tag01.paremntElement);
+
+		let tag02 = document.querySelector('.red');
+        console.log(tag02);
+        console.log(tag02.nextElementSibling);
+		console.log(tag02.parentElement);
+		
+		let tag03 = document.querySelector('#n-2');
+		console.log(tag03);
+		console.log(tag03.nextElementSibling);
+		console.log(tag03.parentElement);
+		console.log(tag03.parentElement.parentElement);
+	});
 </script>
 
 </html>

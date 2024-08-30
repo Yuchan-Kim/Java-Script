@@ -20,6 +20,25 @@
 </body>
 
 <script>
+	document.addEventListener("DOMContentLoaded", function(){
+        let tag01 = document.querySelector('#txt-userId');
+		console.log(tag01);
+		tag01.id = 't-id';
+		console.log(tag01.id);
+		tag01.type = 'password';
+
+		let change = document.querySelector('a');
+		change.href = "https://google.com";
+		console.log(change.href);
+		change.target = '_self';
+		change.textContent = "구글";
+
+
+
+        
+    });
+    // DOMContentLoaded 이벤트: HTML 문서가 로드되고 DOM 트리가 완성된 후 발생하는 이벤트.
+    // body 태그가 로드된
 
 
 </script>

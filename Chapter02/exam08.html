@@ -53,6 +53,40 @@
 </body>
 
 <script>
+	document.addEventListener("DOMContentLoaded", function(){
+		let tag01 = document.getElementById('n-1');
+		let tag02 = document.getElementById('n-2');
+		let tag03 = document.getElementById('n-3');
+		console.log(tag01.firstElementChild.textContent);
+		console.log(tag02);
+		console.log(tag03);
+
+
+
+		let personVo1 = {
+			name: tag01.firstElementChild.textContent,
+            hp:tag01.firstElementChild.nextElementSibling.textContent,
+            company:tag01.lastElementChild.textContent
+		}
+		let personVo2 = {
+            name: tag02.firstElementChild.textContent,
+            hp:tag02.firstElementChild.nextElementSibling.textContent,
+            company:tag02.lastElementChild.textContent
+        }
+		let personVo3 = {
+            name: tag03.firstElementChild.textContent,
+            hp:tag03.firstElementChild.nextElementSibling.textContent,
+            company:tag03.lastElementChild.textContent
+        }
+
+		let personList = [personVo1, personVo2, personVo3];
+		console.log(personList);
+		for (let i = 0; i < personList.length; i ++){
+			console.log(personList[i]);
+		}
+
+	});
+
 </script>
 
 </html>

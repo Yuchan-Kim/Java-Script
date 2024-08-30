@@ -23,7 +23,19 @@
 </body>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        let leftInput = document.querySelector('#left');
+        let rightInput = document.querySelector('#right');
+        let display = document.querySelector('#display');
+        let btnPlus = document.querySelector('#btnPlus');
 
+        btnPlus.addEventListener('click', function(){
+            let num1 = parseInt(leftInput.value);
+            let num2 = parseInt(rightInput.value);
+            let result = num1 + num2;
+            display.textContent = result;
+        })
+    });
 </script>
 
 </html>

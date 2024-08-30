@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id = "p1">지민이형에게 영업당한 데스크탑</p>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            let pTag = document.querySelector('#p1');
+            pTag.style.color = "red";
+            pTag.style.fontSize = "20px";
+            pTag.style.backgroundColor = "yellow";
+            pTag.style.padding = "10px";
+            pTag.style.margin = "20px";
+            pTag.style.border = "1px solid black";
+            pTag.style.cursor = "pointer";
+
+            pTag.insertAdjacentHTML('beforebegin',"박지민"); 
+            pTag.insertAdjacentHTML('afterbegin',"<p>이걸 모른다고?</p>"); 
+
+        })
+    </script>
+</body>
+
+
+</html>

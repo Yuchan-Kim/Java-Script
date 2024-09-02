@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-
-<style>
-
-</style>
-
-
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        /* Add styles if needed */
+    </style>
 </head>
 
 <body>
     <div>
-		<table border="1" width="540px">
-			<tr>
-				<td>이름</td><td><input type="text" name="name"></td>
-				<td>비밀번호</td><td><input type="password" name="pw"></td>
-			</tr>
-			<tr>
-				<td colspan="4"><textarea cols="72" rows="5" name="content"></textarea></td>
-			</tr>
-			<tr>
-				<td colspan="4"><button id="btnWrite" type="button">등록</button></td>
-			</tr>
-		</table>
-	</div>
-	<br>
-
+        <table border="1" width="540px">
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="name"></td>
+                <td>비밀번호</td>
+                <td><input type="password" name="pw"></td>
+            </tr>
+            <tr>
+                <td colspan="4"><textarea cols="72" rows="5" name="content"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="4"><button id="btnWrite" type="button">등록</button></td>
+            </tr>
+        </table>
+    </div>
+    <br>
 </body>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let btnWrite = document.querySelector("#btnWrite");
 
+    let nameInput = document.querySelector('[name="name"]');
+    let pwInput = document.querySelector('[name="pw"]');
+    let contentInput = document.querySelector('[name="content"]');
 
+    btnWrite.addEventListener("click", function () {
+        let name = nameInput.value.trim();
+        let pw = pwInput.value.trim();
+        let content = contentInput.value.trim();
 
-
-
-
-
-
-
+        if (name === "" || pw === "" || content === "") {
+            window.alert("모든 항목을 입력하세요.");
+            nameInput.value = "";
+            pwInput.value = "";
+            contentInput.value = "";
+        } else {
+            console.log("name : " + name);
+            console.log("pw : " + pw);
+            console.log("content : " + content);
+            nameInput.value = "";
+            pwInput.value = "";
+            contentInput.value = "";
+        }
+    });
+});
 
 </script>
 

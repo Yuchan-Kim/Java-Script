@@ -60,8 +60,32 @@
 </body>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        let dataArea = document.querySelectorAll("table td");
+        let btnGetDate = document.querySelector("#btnGetDate");
+
+        let guestInfo = [];
+
+        for (let i =0; i < dataArea.length; i += 5){
+            let guest = {
+                idNum : dataArea[i].textContent,
+                name : dataArea[i+1].textContent,
+                visitDate : dataArea[i+2].textContent,
+                comments : dataArea[i+4].textContent
+            };
+
+            guestInfo.push(guest);
+        }
+
+        btnGetDate.addEventListener("click", function(){
+            console.log(guestInfo);
+        });
 
 
+
+    });
+
+    
 </script>
 
 </html>

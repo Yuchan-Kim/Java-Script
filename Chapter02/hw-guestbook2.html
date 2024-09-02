@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Insert title here</title>
     <style>
-        /* Add styles if needed */
+        
     </style>
 </head>
 
@@ -29,34 +29,42 @@
 </body>
 
 <script>
+    // DOM이 로드된 후 실행될 이벤트 리스너 추가
     document.addEventListener("DOMContentLoaded", function () {
-    let btnWrite = document.querySelector("#btnWrite");
+        // 등록 버튼 요소를 선택
+        let btnWrite = document.querySelector("#btnWrite");
 
-    let nameInput = document.querySelector('[name="name"]');
-    let pwInput = document.querySelector('[name="pw"]');
-    let contentInput = document.querySelector('[name="content"]');
+        // 입력 필드 요소들 선택
+        let nameInput = document.querySelector('[name="name"]'); // 이름 입력 필드
+        let pwInput = document.querySelector('[name="pw"]'); // 비밀번호 입력 필드
+        let contentInput = document.querySelector('[name="content"]'); // 내용 입력 필드
 
-    btnWrite.addEventListener("click", function () {
-        let name = nameInput.value.trim();
-        let pw = pwInput.value.trim();
-        let content = contentInput.value.trim();
+        // 버튼 클릭 시 실행될 이벤트 리스너 추가
+        btnWrite.addEventListener("click", function () {
+            // 각 입력 필드의 값을 가져와 공백을 제거
+            let name = nameInput.value.trim();
+            let pw = pwInput.value.trim();
+            let content = contentInput.value.trim();
 
-        if (name === "" || pw === "" || content === "") {
-            window.alert("모든 항목을 입력하세요.");
-            nameInput.value = "";
-            pwInput.value = "";
-            contentInput.value = "";
-        } else {
-            console.log("name : " + name);
-            console.log("pw : " + pw);
-            console.log("content : " + content);
-            nameInput.value = "";
-            pwInput.value = "";
-            contentInput.value = "";
-        }
+            // 입력 필드 중 하나라도 비어있을 경우 경고 메시지 출력
+            if (name === "" || pw === "" || content === "") {
+                window.alert("모든 항목을 입력하세요."); // 경고창 표시
+                nameInput.value = ""; // 이름 입력 필드 초기화
+                pwInput.value = ""; // 비밀번호 입력 필드 초기화
+                contentInput.value = ""; // 내용 입력 필드 초기화
+            } else {
+                // 입력 값들을 콘솔에 출력
+                console.log("name : " + name);
+                console.log("pw : " + pw);
+                console.log("content : " + content);
+
+                // 입력 필드를 초기화
+                nameInput.value = "";
+                pwInput.value = "";
+                contentInput.value = "";
+            }
+        });
     });
-});
-
 </script>
 
 </html>

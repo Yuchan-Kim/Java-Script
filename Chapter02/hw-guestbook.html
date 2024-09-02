@@ -60,32 +60,34 @@
 </body>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function(){
+    // DOM이 로드된 후 실행될 이벤트 리스너 추가
+    document.addEventListener("DOMContentLoaded", function() {
+        // 모든 테이블의 td 요소를 선택
         let dataArea = document.querySelectorAll("table td");
+        // 데이터 수집 버튼 요소를 선택
         let btnGetDate = document.querySelector("#btnGetDate");
 
+        // 방문자 정보를 저장할 배열 초기화
         let guestInfo = [];
 
-        for (let i =0; i < dataArea.length; i += 5){
+        // 모든 테이블 데이터를 5칸씩 건너뛰며 방문자 정보 객체를 생성하여 배열에 추가
+        for (let i = 0; i < dataArea.length; i += 5) {
+            // 방문자 정보를 객체로 저장
             let guest = {
-                idNum : dataArea[i].textContent,
-                name : dataArea[i+1].textContent,
-                visitDate : dataArea[i+2].textContent,
-                comments : dataArea[i+4].textContent
+                idNum: dataArea[i].textContent,            // ID 번호
+                name: dataArea[i + 1].textContent,         // 방문자 이름
+                visitDate: dataArea[i + 2].textContent,    // 방문 날짜
+                comments: dataArea[i + 4].textContent      // 방문자 코멘트
             };
 
+            // 배열에 방문자 정보 객체를 추가
             guestInfo.push(guest);
         }
 
-        btnGetDate.addEventListener("click", function(){
+        // 버튼 클릭 시 방문자 정보를 콘솔에 출력하는 이벤트 리스너 추가
+        btnGetDate.addEventListener("click", function() {
             console.log(guestInfo);
         });
-
-
-
     });
-
-    
 </script>
-
 </html>

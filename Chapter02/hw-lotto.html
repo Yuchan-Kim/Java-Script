@@ -45,22 +45,25 @@
 </body>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function(){
-        let numArr = document.querySelectorAll('[name = "nums"] td');
-        
+    // DOM이 로드된 후 실행될 이벤트 리스너 추가
+    document.addEventListener("DOMContentLoaded", function() {
+        // nums 행의 td 요소들을 선택
+        let numArr = document.querySelectorAll('[name="nums"] td');
 
+        // 등록 버튼 요소를 선택
         let submitBtn = document.querySelector("#btnMakeNo");
-        submitBtn.addEventListener("click", function(){
-            for (let i = 0; i <numArr.length; i++) {
-            let randomNum = Math.floor(Math.random() * 45 + 1);
-            numArr[i].textContent = randomNum;
+        // 버튼 클릭 시 실행될 이벤트 리스너 추가
+        submitBtn.addEventListener("click", function() {
+            // td 요소들에 대해 반복문 실행
+            for (let i = 0; i < numArr.length; i++) {
+                // 1부터 45까지의 랜덤 숫자 생성
+                let randomNum = Math.floor(Math.random() * 45 + 1);
+                // td 요소의 텍스트 콘텐츠를 랜덤 숫자로 설정
+                numArr[i].textContent = randomNum;
             }
         });
 
     });
-
-
-
 </script>
 
 </html>
